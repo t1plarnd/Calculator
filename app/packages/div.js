@@ -1,8 +1,8 @@
-function div(a, b){
-    if(b != 0){
-        return (a/b)
+function div(a, b) {
+    if (b === 0) {
+        return NaN;
     }
-    throw console.error('b can`t be equal to 0');
+    return a / b;
 }
 
-export {div};
+export { div };

@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1e1e24; 
+}
+
+.calculator {
+  background-color: #2b2d36; 
+  border-radius: 24px;
+  padding: 24px;
+  width: 320px;
+}
+
+.result-display {
+  min-height: 24px;
+  text-align: right;
+  color: #8c8c95; 
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  padding: 0 10px;
+  word-wrap: break-word;
+}
+
+.main-display {
+  width: 100%;
+  background: transparent;
+  border: none;
+  text-align: right;
+  color: #ffffff;
+  font-size: 3rem;
+  padding: 0 10px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 12px; 
+}
+
+button {
+  border: none;
+  border-radius: 16px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 18px 0;
+  cursor: pointer;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.Number {
+  background-color: #3e404b;
+}
+
+.Operation {
+  background-color: #ff9f0a;
+}
+
+.ClearDis {
+  background-color: #ff453a; 
+  color: white;
+}

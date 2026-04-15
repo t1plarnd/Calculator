@@ -1,8 +1,10 @@
+import { FC } from "react";
+
 interface DisplayProps {
   value: string;
 }
 
-export function Display({ value }: DisplayProps) {
+export const Display: FC<DisplayProps> = ({ value }: DisplayProps) =>{
   return (
     <div className="display-container">
       <input 

@@ -1,4 +1,4 @@
-function Sub(a:number, b:number): number{
+const Sub = (a:number, b:number): number => {
     return (a-b);
 }
 

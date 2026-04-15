@@ -11,6 +11,7 @@ import './style.css';
 function App() {
   const [expression, setExpression] = useState("");
   const [result, setResult] = useState("");
+  const  calculatorValues = Array.from({length : 10}, (( _, i: number)=>i))
 
   const handleBtnClick = (text: string) => {
     if (text === "=") {
@@ -68,7 +69,7 @@ function App() {
       const finalResult = Number(tokens[0]);
       
       if (Number.isNaN(finalResult)) {
-        setResult("Помилка (ділення на 0)");
+        setResult("Помилка");
       } else {
         setResult(String(finalResult));
       }
@@ -87,20 +88,12 @@ function App() {
       <Display value={expression} />
       
       <div className="keypad">
-        <Button text="1" param="Number" onClick={handleBtnClick} />
-        <Button text="2" param="Number" onClick={handleBtnClick} />
-        <Button text="3" param="Number" onClick={handleBtnClick} />
-        <Button text="+" param="Operation" onClick={handleBtnClick} />
-        <Button text="4" param="Number" onClick={handleBtnClick} />
-        <Button text="5" param="Number" onClick={handleBtnClick} />
-        <Button text="6" param="Number" onClick={handleBtnClick} />
-        <Button text="-" param="Operation" onClick={handleBtnClick} />
-        <Button text="7" param="Number" onClick={handleBtnClick} />
-        <Button text="8" param="Number" onClick={handleBtnClick} />
-        <Button text="9" param="Number" onClick={handleBtnClick} />
+        {calculatorValues.map((number) => <Button text={number.toString()} param="Number" onClick={handleBtnClick} />)}
+
         <Button text="*" param="Operation" onClick={handleBtnClick} />
         <Button text="C" param="ClearDis" onClick={handleBtnClick} />
-        <Button text="0" param="Number" onClick={handleBtnClick} />
+        <Button text="-" param="Operation" onClick={handleBtnClick} />
+        <Button text="+" param="Operation" onClick={handleBtnClick} />
         <Button text="/" param="Operation" onClick={handleBtnClick} />
         <Button text="=" param="Operation" onClick={handleBtnClick} />
       </div>

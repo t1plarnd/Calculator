@@ -1,4 +1,4 @@
-function Mult(a:number, b:number): number{
+const Mult = (a:number, b:number): number => {
     return (a*b);
 }
 

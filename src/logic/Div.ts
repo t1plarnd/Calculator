@@ -1,4 +1,4 @@
-function Div(a:number, b:number): number{
+const Div = (a:number, b:number): number => {
     return (a/b);
 }
 
